@@ -31,3 +31,12 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
+
+// not sure if we need this yet
+if (module.hot) {
+  module.hot.accept((err) => {
+    if (err) {
+      console.error('cannot apply update', err);
+    }
+  });
+}
