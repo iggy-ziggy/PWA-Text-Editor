@@ -28,6 +28,9 @@ On the numbered lines, type in notes or code snippets. The content will be saved
 
 Click the INSTALL button at the top to download the application and use it offline.
 
+### Deploy
+https://intense-atoll-21869-fcf1f216457c.herokuapp.com/
+
 ### Images
 
 * Asset Cache
