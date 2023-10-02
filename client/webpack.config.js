@@ -27,18 +27,26 @@ module.exports = () => {
         title: 'Webpack Plugin',
       }),
       new MiniCssExtractPlugin(),
-      new GenerateSW(),
+      // new GenerateSW(),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: 'JATE',
         short_name: 'JATE',
         start_url: './',
         description: 'just another text editor',
+        theme_color: '#02374f',
+        background_color: '#02374f',
         publicPath: './',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('images', 'icons'),
+            destination: path.join('assets', 'icons'),
           },
         ],
       }),
